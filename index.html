@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estimora — Estimasi Lebih Akurat. Proyek Lebih Terukur.</title>
+<meta name="description" content="Estimora — Project Cost Estimator. Hitung estimasi biaya, susun rincian pekerjaan, dan buat penawaran harga profesional.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Lewati ke konten utama</a>
+
+<!-- ============ LANDING VIEW ============ -->
+<div id="view-landing">
+  <header class="landing-nav" id="landing-nav">
+    <div class="container nav-inner">
+      <a href="#" class="brand" id="brand-home" aria-label="Estimora beranda">
+        <span class="brand-icon"><i data-lucide="calculator"></i></span>
+        <span class="brand-text">Estimora</span>
+      </a>
+      <nav class="nav-links" id="nav-links" aria-label="Navigasi utama">
+        <a href="#fitur">Fitur</a>
+        <a href="#cara-kerja">Cara Kerja</a>
+        <a href="#tentang">Tentang</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn btn-ghost btn-sm" data-action="open-app" data-page="dashboard">Masuk Aplikasi</button>
+        <button class="btn btn-primary btn-sm" data-action="open-app" data-page="estimator">Mulai Menghitung</button>
+        <button class="hamburger" id="hamburger" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="nav-links">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <a href="#fitur">Fitur</a>
+      <a href="#cara-kerja">Cara Kerja</a>
+      <a href="#tentang">Tentang</a>
+      <button class="btn btn-primary btn-block" data-action="open-app" data-page="estimator">Mulai Menghitung</button>
+      <button class="btn btn-outline btn-block" data-action="open-app" data-page="dashboard">Masuk Aplikasi</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero container">
+      <div class="hero-text">
+        <span class="badge"><i data-lucide="sparkles"></i> Untuk freelancer &amp; studio digital</span>
+        <h1>Rencanakan Biaya Proyek dengan Lebih Percaya Diri.</h1>
+        <p class="lead">Hitung estimasi biaya, susun rincian pekerjaan, dan buat penawaran harga profesional dalam satu tempat.</p>
+        <div class="hero-cta">
+          <button class="btn btn-primary btn-lg" data-action="open-app" data-page="estimator"><i data-lucide="calculator"></i> Mulai Menghitung</button>
+          <a class="btn btn-outline btn-lg" href="#cara-kerja"><i data-lucide="play-circle"></i> Lihat Cara Kerja</a>
+        </div>
+        <ul class="hero-points">
+          <li><i data-lucide="check-circle-2"></i> Tanpa daftar akun</li>
+          <li><i data-lucide="check-circle-2"></i> Data tersimpan di browser</li>
+          <li><i data-lucide="check-circle-2"></i> Penawaran siap cetak PDF</li>
+        </ul>
+      </div>
+      <div class="hero-mock" aria-label="Pratinjau dashboard Estimora">
+        <div class="mock-window">
+          <div class="mock-bar"><span></span><span></span><span></span><em>Estimora — Dashboard</em></div>
+          <div class="mock-body">
+            <div class="mock-side">
+              <div class="mock-logo"></div>
+              <div class="mock-link active"></div><div class="mock-link"></div><div class="mock-link"></div><div class="mock-link"></div>
+            </div>
+            <div class="mock-main">
+              <div class="mock-title"></div>
+              <div class="mock-cards"><div></div><div></div><div></div></div>
+              <div class="mock-table">
+                <div class="mock-row head"><span></span><span></span><span></span></div>
+                <div class="mock-row"><span></span><span></span><span class="pill"></span></div>
+                <div class="mock-row"><span></span><span></span><span class="pill"></span></div>
+                <div class="mock-total"><span></span><strong>Rp 48.500.000</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mock-float f1"><i data-lucide="file-text"></i><div><strong>Penawaran terkirim</strong><small>EST-2026-001 • Rp 12,5 jt</small></div></div>
+        <div class="mock-float f2"><i data-lucide="trending-up"></i><div><strong>Margin 25%</strong><small>Keuntungan terukur</small></div></div>
+      </div>
+    </section>
+
+    <!-- LOGO STRIP -->
+    <section class="strip">
+      <div class="container strip-inner">
+        <span>Cocok untuk</span>
+        <ul>
+          <li><i data-lucide="globe"></i> Website</li>
+          <li><i data-lucide="smartphone"></i> Aplikasi</li>
+          <li><i data-lucide="pen-tool"></i> UI/UX Design</li>
+          <li><i data-lucide="wrench"></i> Maintenance</li>
+          <li><i data-lucide="megaphone"></i> Digital Marketing</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FITUR -->
+    <section class="section container" id="fitur">
+      <div class="section-head">
+        <span class="eyebrow">Fitur Utama</span>
+        <h2>Semua yang dibutuhkan untuk penawaran profesional.</h2>
+        <p>Alur kerja estimasi yang terstruktur, dari rincian pekerjaan hingga dokumen siap kirim ke klien.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="card feature"><span class="f-icon"><i data-lucide="calculator"></i></span><h3>Perhitungan biaya otomatis</h3><p>Subtotal, diskon, pajak, dan total diperbarui langsung setiap kali input berubah.</p></article>
+        <article class="card feature"><span class="f-icon"><i data-lucide="list-checks"></i></span><h3>Rincian pekerjaan fleksibel</h3><p>Tambah, edit, hapus, dan susun ulang item pekerjaan tanpa batasan yang tidak masuk akal.</p></article>
+        <article class="card feature"><span class="f-icon"><i data-lucide="percent"></i></span><h3>Pajak &amp; keuntungan</h3><p>Diskon nominal atau persen, pajak opsional, dan kalkulator margin vs markup yang transparan.</p></article>
+        <article class="card feature"><span class="f-icon"><i data-lucide="printer"></i></span><h3>Dokumen siap cetak</h3><p>Pratinjau penawaran profesional dan cetak atau simpan sebagai PDF langsung dari browser.</p></article>
+        <article class="card feature"><span class="f-icon"><i data-lucide="history"></i></span><h3>Riwayat tersimpan</h3><p>Semua estimasi tersimpan otomatis di browser dan tetap ada setelah dimuat ulang.</p></article>
+        <article class="card feature"><span class="f-icon"><i data-lucide="folder-kanban"></i></span><h3>Kelola proyek mudah</h3><p>Cari, filter, urutkan, duplikasi, dan ubah status proyek dari draft hingga diterima.</p></article>
+      </div>
+    </section>
+
+    <!-- CARA KERJA -->
+    <section class="section section-alt" id="cara-kerja">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Cara Kerja</span>
+          <h2>Dari ide proyek ke penawaran dalam 4 langkah.</h2>
+        </div>
+        <ol class="steps">
+          <li class="card"><span class="step-num">1</span><span class="f-icon"><i data-lucide="plus-circle"></i></span><h3>Buat estimasi proyek</h3><p>Isi nama proyek, klien, kategori, dan tenggat waktu.</p></li>
+          <li class="card"><span class="step-num">2</span><span class="f-icon"><i data-lucide="list-plus"></i></span><h3>Tambahkan rincian &amp; biaya</h3><p>Susun item pekerjaan, biaya tambahan, diskon, dan pajak.</p></li>
+          <li class="card"><span class="step-num">3</span><span class="f-icon"><i data-lucide="check-check"></i></span><h3>Periksa hasil perhitungan</h3><p>Ringkasan transparan menunjukkan setiap komponen biaya.</p></li>
+          <li class="card"><span class="step-num">4</span><span class="f-icon"><i data-lucide="file-down"></i></span><h3>Cetak / simpan PDF</h3><p>Pratinjau dokumen penawaran lalu cetak atau simpan sebagai PDF.</p></li>
+        </ol>
+        <div class="center"><button class="btn btn-primary btn-lg" data-action="open-app" data-page="estimator">Coba Sekarang — Gratis</button></div>
+      </div>
+    </section>
+
+    <!-- TENTANG -->
+    <section class="section container" id="tentang">
+      <div class="about-grid">
+        <div>
+          <span class="eyebrow">Tentang Estimora</span>
+          <h2>Estimasi lebih akurat.<br>Proyek lebih terukur.</h2>
+          <p>Estimora membantu freelancer, developer, desainer, dan pemilik usaha menghitung estimasi biaya proyek secara terstruktur. Tidak ada harga final yang diklaim pasti — semua angka adalah estimasi yang transparan dan dapat dipertanggungjawabkan.</p>
+          <ul class="about-list">
+            <li><i data-lucide="shield-check"></i> Rumus konsisten &amp; transparan</li>
+            <li><i data-lucide="hard-drive"></i> Data milik Anda, tersimpan lokal</li>
+            <li><i data-lucide="banknote"></i> Format Rupiah (IDR) yang benar</li>
+          </ul>
+        </div>
+        <div class="card formula-card">
+          <h3><i data-lucide="sigma"></i> Rumus yang digunakan</h3>
+          <ul>
+            <li><span>Subtotal item</span><code>qty × harga satuan</code></li>
+            <li><span>Total sebelum pajak</span><code>subtotal + biaya tambahan</code></li>
+            <li><span>Dasar pajak</span><code>maks(0, total − diskon)</code></li>
+            <li><span>Pajak</span><code>dasar × tarif / 100</code></li>
+            <li><span>Total estimasi</span><code>maks(0, total − diskon + pajak)</code></li>
+          </ul>
+          <p class="muted"><i data-lucide="info"></i> Nilai yang ditampilkan adalah estimasi, bukan harga final yang pasti.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta container">
+      <div class="cta-box">
+        <h2>Siap membuat penawaran pertama Anda?</h2>
+        <p>Mulai hitung estimasi proyek dalam hitungan menit. Tanpa akun, tanpa biaya.</p>
+        <button class="btn btn-white btn-lg" data-action="open-app" data-page="estimator"><i data-lucide="arrow-right"></i> Mulai Menghitung</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="landing-footer">
+    <div class="container footer-inner">
+      <div class="brand"><span class="brand-icon"><i data-lucide="calculator"></i></span><span class="brand-text">Estimora</span></div>
+      <p>Estimasi Lebih Akurat. Proyek Lebih Terukur.</p>
+      <p class="muted small">Data tersimpan secara lokal di browser perangkat Anda. © 2026 Estimora.</p>
+    </div>
+  </footer>
+</div>
+
+<!-- ============ APP VIEW ============ -->
+<div id="view-app" hidden>
+  <aside class="sidebar" aria-label="Navigasi aplikasi">
+    <div class="side-brand">
+      <span class="brand-icon"><i data-lucide="calculator"></i></span>
+      <span><strong>Estimora</strong><small>Cost Estimator</small></span>
+    </div>
+    <nav class="side-nav" id="side-nav">
+      <button data-page="dashboard" class="side-link active"><i data-lucide="layout-dashboard"></i> Dashboard</button>
+      <button data-page="estimator" class="side-link"><i data-lucide="plus-square"></i> Buat Estimasi</button>
+      <button data-page="projects" class="side-link"><i data-lucide="folder-open"></i> Semua Proyek <span class="count-badge" id="nav-project-count" hidden>0</span></button>
+      <button data-page="settings" class="side-link"><i data-lucide="settings"></i> Pengaturan</button>
+    </nav>
+    <div class="side-foot">
+      <button class="side-link" id="btn-back-landing"><i data-lucide="globe"></i> Halaman Depan</button>
+      <p class="muted small">Data tersimpan lokal di browser.</p>
+    </div>
+  </aside>
+
+  <div class="app-main">
+    <header class="app-header">
+      <button class="icon-btn mobile-nav-btn" id="mobile-nav-btn" aria-label="Buka navigasi"><i data-lucide="menu"></i></button>
+      <div class="header-title">
+        <h1 id="page-title">Dashboard</h1>
+        <p id="page-subtitle" class="muted"></p>
+      </div>
+      <div class="header-right">
+        <span class="date-chip"><i data-lucide="calendar"></i> <span id="today-label"></span></span>
+        <button class="btn btn-primary btn-sm" id="header-cta"><i data-lucide="plus"></i> <span>Buat Estimasi</span></button>
+      </div>
+    </header>
+
+    <div class="mobile-nav" id="app-mobile-nav" hidden>
+      <button data-page="dashboard" class="side-link active"><i data-lucide="layout-dashboard"></i> Dashboard</button>
+      <button data-page="estimator" class="side-link"><i data-lucide="plus-square"></i> Buat Estimasi</button>
+      <button data-page="projects" class="side-link"><i data-lucide="folder-open"></i> Semua Proyek</button>
+      <button data-page="settings" class="side-link"><i data-lucide="settings"></i> Pengaturan</button>
+    </div>
+
+    <main id="main-content">
+      <!-- DASHBOARD -->
+      <section id="page-dashboard" class="page">
+        <div class="stat-grid">
+          <article class="card stat"><span class="stat-icon blue"><i data-lucide="files"></i></span><div><small>Total Estimasi Tersimpan</small><strong id="stat-total">0</strong></div></article>
+          <article class="card stat"><span class="stat-icon navy"><i data-lucide="wallet"></i></span><div><small>Total Nilai Estimasi</small><strong id="stat-value">Rp 0</strong></div></article>
+          <article class="card stat"><span class="stat-icon amber"><i data-lucide="file-edit"></i></span><div><small>Proyek Draft</small><strong id="stat-draft">0</strong></div></article>
+          <article class="card stat"><span class="stat-icon green"><i data-lucide="send"></i></span><div><small>Penawaran Dibuat</small><strong id="stat-offers">0</strong></div></article>
+        </div>
+        <div class="dash-grid">
+          <article class="card">
+            <div class="card-head"><h3><i data-lucide="clock"></i> Estimasi Terbaru</h3><button class="btn btn-ghost btn-sm" data-goto="projects">Lihat Semua <i data-lucide="arrow-right"></i></button></div>
+            <div id="recent-list" class="recent-list"></div>
+          </article>
+          <article class="card">
+            <div class="card-head"><h3><i data-lucide="pie-chart"></i> Distribusi Biaya per Kategori</h3></div>
+            <div id="category-bars" class="bars"></div>
+            <p class="muted small" id="dist-note"></p>
+          </article>
+        </div>
+        <div id="dash-empty" class="card empty" hidden>
+          <span class="empty-icon"><i data-lucide="folder-open"></i></span>
+          <h3>Belum ada estimasi tersimpan</h3>
+          <p>Mulai dengan membuat estimasi pertama Anda. Semua perhitungan otomatis dan dokumen penawaran siap cetak.</p>
+          <button class="btn btn-primary" data-goto="estimator"><i data-lucide="plus"></i> Buat Estimasi Pertama</button>
+        </div>
+      </section>
+
+      <!-- ESTIMATOR -->
+      <section id="page-estimator" class="page" hidden>
+        <form id="estimate-form" novalidate>
+          <div class="est-layout">
+            <div class="est-main">
+              <article class="card">
+                <div class="card-head"><h3><i data-lucide="info"></i> Informasi Proyek</h3><span class="est-number-chip"><i data-lucide="hash"></i> <span id="est-number-label">—</span></span></div>
+                <div class="grid-2">
+                  <div class="field"><label for="f-project">Nama proyek <b>*</b></label><input id="f-project" name="project" type="text" placeholder="cth: Website Company Profile PT Maju" maxlength="120" required><p class="err" data-err="f-project" hidden></p></div>
+                  <div class="field"><label for="f-client">Nama klien</label><input id="f-client" type="text" placeholder="cth: PT Maju Jaya" maxlength="120"></div>
+                  <div class="field"><label for="f-category">Jenis / kategori proyek</label><select id="f-category"></select></div>
+                  <div class="field"><label for="f-custom-category">Kategori kustom (opsional)</label><input id="f-custom-category" type="text" placeholder="cth: Konsultasi IT" maxlength="60"><p class="hint">Isi untuk memakai kategori sendiri selain pilihan di atas.</p></div>
+                  <div class="field full"><label for="f-desc">Deskripsi proyek</label><textarea id="f-desc" rows="3" placeholder="Ringkasan ruang lingkup pekerjaan..." maxlength="2000"></textarea></div>
+                  <div class="field"><label for="f-date">Tanggal pembuatan</label><input id="f-date" type="date"></div>
+                  <div class="field"><label for="f-deadline">Tenggat waktu (opsional)</label><input id="f-deadline" type="date"></div>
+                  <div class="field"><label for="f-vendor">Nama freelancer / perusahaan</label><input id="f-vendor" type="text" placeholder="cth: Studio Kreatif Anda" maxlength="120"></div>
+                  <div class="field"><label for="f-status">Status</label><select id="f-status"><option value="draft">Draft</option><option value="ready">Siap Ditawarkan</option><option value="accepted">Diterima</option><option value="rejected">Ditolak</option></select></div>
+                </div>
+              </article>
+
+              <article class="card">
+                <div class="card-head"><h3><i data-lucide="list-checks"></i> Rincian Pekerjaan</h3><button type="button" class="btn btn-outline btn-sm" id="btn-add-item"><i data-lucide="plus"></i> Tambah Item</button></div>
+                <p class="muted small">Subtotal tiap item = kuantitas × harga satuan. Seret/baris tombol untuk mengubah urutan.</p>
+                <div id="items-list"></div>
+                <div id="items-empty" class="empty small" hidden><i data-lucide="clipboard-list"></i><p>Belum ada item pekerjaan. Klik “Tambah Item” untuk mulai.</p></div>
+              </article>
+
+              <article class="card">
+                <div class="card-head"><h3><i data-lucide="coins"></i> Biaya Tambahan</h3></div>
+                <p class="muted small">Kosongkan (0) jika tenaga kerja &amp; operasional sudah termasuk dalam item pekerjaan agar tidak dihitung ganda.</p>
+                <div class="grid-3">
+                  <div class="field"><label for="f-labor">Tenaga kerja tambahan (Rp)</label><input id="f-labor" type="text" inputmode="numeric" placeholder="0"></div>
+                  <div class="field"><label for="f-operational">Operasional tambahan (Rp)</label><input id="f-operational" type="text" inputmode="numeric" placeholder="0"></div>
+                  <div class="field"><label for="f-other">Biaya lain (Rp)</label><input id="f-other" type="text" inputmode="numeric" placeholder="0"></div>
+                </div>
+                <div class="field"><label for="f-other-desc">Keterangan biaya lain (opsional)</label><input id="f-other-desc" type="text" maxlength="200" placeholder="cth: Lisensi, hosting tahun pertama"></div>
+              </article>
+
+              <article class="card">
+                <div class="card-head"><h3><i data-lucide="percent"></i> Diskon &amp; Pajak</h3></div>
+                <div class="grid-2">
+                  <div class="field"><label for="f-disc-type">Jenis diskon</label><select id="f-disc-type"><option value="nominal">Nominal (Rp)</option><option value="percent">Persentase (%)</option></select></div>
+                  <div class="field"><label for="f-disc-value">Nilai diskon</label><input id="f-disc-value" type="text" inputmode="decimal" placeholder="0"><p class="err" data-err="f-disc-value" hidden></p></div>
+                  <div class="field"><label class="check"><input type="checkbox" id="f-tax-enabled"> Aktifkan pajak</label></div>
+                  <div class="field"><label for="f-tax-rate">Tarif pajak (%)</label><input id="f-tax-rate" type="text" inputmode="decimal" placeholder="cth: 11"><p class="err" data-err="f-tax-rate" hidden></p></div>
+                </div>
+              </article>
+
+              <article class="card">
+                <div class="card-head"><h3><i data-lucide="trending-up"></i> Margin Keuntungan <span class="tag">Opsional</span></h3><label class="switch"><input type="checkbox" id="f-margin-enabled"><span></span></label></div>
+                <div id="margin-body" hidden>
+                  <p class="muted small"><strong>Margin</strong> = keuntungan ÷ harga jual. <strong>Markup</strong> = keuntungan ÷ biaya dasar. Kalkulator ini hanya saran &amp; tidak otomatis ditambahkan ke total agar tidak terjadi perhitungan ganda.</p>
+                  <div class="grid-2">
+                    <div class="field"><label for="f-margin-base">Estimasi biaya dasar (Rp)</label><input id="f-margin-base" type="text" inputmode="numeric" placeholder="0"><button type="button" class="btn btn-ghost btn-sm" id="btn-fill-base">Isi dari total saat ini</button></div>
+                    <div class="field"><label for="f-margin-pct">Target (%) — harus &lt; 100</label><input id="f-margin-pct" type="text" inputmode="decimal" placeholder="cth: 25"><p class="err" data-err="f-margin-pct" hidden></p></div>
+                    <div class="field"><label for="f-margin-method">Metode</label><select id="f-margin-method"><option value="margin">Margin terhadap harga jual</option><option value="markup">Markup terhadap biaya</option></select></div>
+                    <div class="field"><label>Harga jual saran (sblm pajak)</label><div class="margin-result" id="margin-suggest">Rp 0</div></div>
+                  </div>
+                  <p class="muted small" id="margin-profit">Keuntungan: Rp 0</p>
+                </div>
+              </article>
+
+              <article class="card">
+                <div class="card-head"><h3><i data-lucide="sticky-note"></i> Catatan &amp; Ketentuan</h3></div>
+                <div class="field"><label for="f-notes">Catatan proyek (tampil di penawaran)</label><textarea id="f-notes" rows="3" maxlength="2000" placeholder="cth: Revisi maksimal 3x, ..."></textarea></div>
+                <div class="field"><label for="f-terms">Ketentuan pembayaran (opsional)</label><textarea id="f-terms" rows="3" maxlength="2000" placeholder="cth: DP 50%, pelunasan setelah serah terima."></textarea></div>
+              </article>
+            </div>
+
+            <aside class="est-side">
+              <article class="card summary" aria-live="polite">
+                <h3><i data-lucide="receipt"></i> Ringkasan Langsung</h3>
+                <dl class="sum-list">
+                  <div><dt>Subtotal pekerjaan</dt><dd id="s-subtotal">Rp 0</dd></div>
+                  <div><dt>Biaya tambahan</dt><dd id="s-extra">Rp 0</dd></div>
+                  <div><dt>Total sebelum pajak</dt><dd id="s-before">Rp 0</dd></div>
+                  <div><dt>Diskon</dt><dd id="s-discount" class="neg">− Rp 0</dd></div>
+                  <div><dt>Dasar pajak</dt><dd id="s-taxbase">Rp 0</dd></div>
+                  <div><dt>Pajak</dt><dd id="s-tax">Rp 0</dd></div>
+                  <div class="grand"><dt>Total estimasi</dt><dd id="s-total">Rp 0</dd></div>
+                  <div id="s-margin-row" hidden><dt>Keuntungan (margin)</dt><dd id="s-margin">Rp 0</dd></div>
+                </dl>
+                <p class="muted small"><i data-lucide="info"></i> Angka di atas adalah estimasi, bukan harga final yang pasti.</p>
+                <div class="sum-actions">
+                  <button type="button" class="btn btn-outline btn-block" id="btn-save-draft"><i data-lucide="save"></i> Simpan Draft</button>
+                  <button type="button" class="btn btn-primary btn-block" id="btn-save-final"><i data-lucide="check"></i> Simpan Estimasi</button>
+                  <button type="button" class="btn btn-ghost btn-block" id="btn-preview"><i data-lucide="eye"></i> Pratinjau Penawaran</button>
+                  <button type="button" class="btn btn-ghost btn-block" id="btn-reset-form"><i data-lucide="rotate-ccw"></i> Atur Ulang</button>
+                </div>
+              </article>
+            </aside>
+          </div>
+        </form>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="page-projects" class="page" hidden>
+        <article class="card toolbar">
+          <div class="toolbar-row">
+            <div class="search-box"><i data-lucide="search"></i><input id="q-search" type="search" placeholder="Cari proyek, klien, atau nomor estimasi..." aria-label="Cari proyek"></div>
+            <select id="q-category" aria-label="Filter kategori"><option value="">Semua Kategori</option></select>
+            <select id="q-status" aria-label="Filter status"><option value="">Semua Status</option><option value="draft">Draft</option><option value="ready">Siap Ditawarkan</option><option value="accepted">Diterima</option><option value="rejected">Ditolak</option></select>
+            <select id="q-sort" aria-label="Urutkan"><option value="newest">Terbaru</option><option value="oldest">Terlama</option><option value="highest">Nilai tertinggi</option><option value="lowest">Nilai terendah</option><option value="name">Nama A–Z</option></select>
+          </div>
+          <p class="muted small" id="projects-count"></p>
+        </article>
+        <div class="table-wrap card">
+          <table class="table" id="projects-table">
+            <thead><tr><th>Nomor</th><th>Proyek / Klien</th><th>Kategori</th><th>Total Estimasi</th><th>Status</th><th>Diperbarui</th><th class="th-act">Aksi</th></tr></thead>
+            <tbody id="projects-tbody"></tbody>
+          </table>
+          <div id="projects-cards" class="cards-list"></div>
+          <div id="projects-empty" class="empty" hidden>
+            <span class="empty-icon"><i data-lucide="search-x"></i></span>
+            <h3>Tidak ada proyek ditemukan</h3>
+            <p>Ubah kata kunci atau filter, atau buat estimasi baru.</p>
+            <button class="btn btn-primary" data-goto="estimator"><i data-lucide="plus"></i> Buat Estimasi</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SETTINGS -->
+      <section id="page-settings" class="page" hidden>
+        <div class="set-grid">
+          <article class="card">
+            <h3><i data-lucide="user"></i> Profil &amp; Dokumen</h3>
+            <div class="field"><label for="s-vendor">Nama freelancer / perusahaan</label><input id="s-vendor" type="text" maxlength="120"></div>
+            <div class="field"><label for="s-contact">Kontak (opsional)</label><input id="s-contact" type="text" maxlength="200" placeholder="cth: email / WA / alamat"></div>
+            <div class="field"><label for="s-tax">Tarif pajak default (%)</label><input id="s-tax" type="text" inputmode="decimal" placeholder="cth: 11"></div>
+            <div class="field"><label class="check"><input type="checkbox" id="s-show-contact"> Tampilkan kontak di dokumen penawaran</label></div>
+            <div class="field"><label class="check"><input type="checkbox" id="s-show-notes"> Tampilkan catatan di dokumen penawaran</label></div>
+            <div class="field"><label class="check"><input type="checkbox" id="s-show-terms"> Tampilkan ketentuan pembayaran di dokumen</label></div>
+            <button class="btn btn-primary" id="btn-save-settings"><i data-lucide="save"></i> Simpan Pengaturan</button>
+          </article>
+          <article class="card">
+            <h3><i data-lucide="database"></i> Data &amp; Penyimpanan</h3>
+            <p class="muted small">Data tersimpan di <strong>browser/perangkat yang digunakan</strong> (LocalStorage), bukan tersinkronisasi ke akun atau perangkat lain. Ekspor berkala sebagai cadangan.</p>
+            <div class="set-actions">
+              <button class="btn btn-outline btn-block" id="btn-export"><i data-lucide="download"></i> Ekspor Data (JSON)</button>
+              <label class="btn btn-outline btn-block file-btn"><i data-lucide="upload"></i> Impor Data (JSON)<input type="file" id="file-import" accept="application/json,.json" hidden></label>
+              <button class="btn btn-danger btn-block" id="btn-wipe"><i data-lucide="trash-2"></i> Hapus Seluruh Data</button>
+            </div>
+            <p class="muted small" id="storage-info"></p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Navigasi bawah">
+      <button data-page="dashboard" class="active"><i data-lucide="layout-dashboard"></i><small>Dashboard</small></button>
+      <button data-page="estimator"><i data-lucide="plus-square"></i><small>Estimasi</small></button>
+      <button data-page="projects"><i data-lucide="folder-open"></i><small>Proyek</small></button>
+      <button data-page="settings"><i data-lucide="settings"></i><small>Atur</small></button>
+    </nav>
+  </div>
+</div>
+
+<!-- Preview modal -->
+<div class="modal-backdrop" id="preview-modal" hidden>
+  <div class="modal modal-lg" role="dialog" aria-modal="true" aria-labelledby="preview-title">
+    <div class="modal-head"><h3 id="preview-title"><i data-lucide="file-text"></i> Pratinjau Penawaran</h3><button class="icon-btn" data-close aria-label="Tutup pratinjau"><i data-lucide="x"></i></button></div>
+    <div class="modal-body"><div id="quote-doc" class="quote-doc"></div></div>
+    <div class="modal-foot">
+      <button class="btn btn-ghost" data-close><i data-lucide="pencil"></i> Kembali Mengedit</button>
+      <button class="btn btn-outline" id="btn-modal-save"><i data-lucide="save"></i> Simpan Estimasi</button>
+      <button class="btn btn-primary" id="btn-print"><i data-lucide="printer"></i> Cetak / Simpan PDF</button>
+    </div>
+  </div>
+</div>
+
+<!-- Generic confirm modal -->
+<div class="modal-backdrop" id="confirm-modal" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="confirm-title">
+    <div class="modal-head"><h3 id="confirm-title">Konfirmasi</h3><button class="icon-btn" data-close aria-label="Tutup dialog"><i data-lucide="x"></i></button></div>
+    <div class="modal-body"><p id="confirm-msg"></p><div id="confirm-extra"></div></div>
+    <div class="modal-foot"><button class="btn btn-ghost" data-close>Batal</button><button class="btn btn-danger" id="confirm-yes">Ya, lanjutkan</button></div>
+  </div>
+</div>
+
+<!-- Detail modal -->
+<div class="modal-backdrop" id="detail-modal" hidden>
+  <div class="modal modal-lg" role="dialog" aria-modal="true" aria-labelledby="detail-title">
+    <div class="modal-head"><h3 id="detail-title"><i data-lucide="eye"></i> Detail Estimasi</h3><button class="icon-btn" data-close aria-label="Tutup detail"><i data-lucide="x"></i></button></div>
+    <div class="modal-body"><div id="detail-body"></div></div>
+    <div class="modal-foot"><button class="btn btn-ghost" data-close>Tutup</button><button class="btn btn-outline" id="detail-edit"><i data-lucide="pencil"></i> Edit</button><button class="btn btn-primary" id="detail-print"><i data-lucide="printer"></i> Cetak Ulang</button></div>
+  </div>
+</div>
+
+<div id="toast-root" aria-live="polite" aria-atomic="true"></div>
+<div id="print-area" hidden></div>
+
+<script src="script.js"></script>
+</body>
+</html>
